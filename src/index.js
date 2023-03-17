@@ -1,13 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Login from './Login';
 import App from './App';
+import BucketList from './BucketList.js'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/cs378-p4/" element={<Login />} />
+        {/* <Route path="/cs378-p4/Home" element={<App />} />
+        <Route path="/cs378-p4/Weekly" element={<BucketList title="Weekly"/>} />
+        <Route path="/cs378-p4/Monthly" element={<BucketList title="Monthly"/>} />
+        <Route path="/cs378-p4/Yearly" element={<BucketList title="Yearly"/>} /> */}
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

@@ -1,0 +1,139 @@
+.back-button {
+    background-color: white;
+    border: none;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.back-icon {
+    margin: auto;
+    width: 50px;
+    height: 30px;
+    fill: #ECA869;
+}
+
+h1 {
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+
+h3 {
+    margin-top: 5px;
+    color: #EEE9DA;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+}
+
+.list-container {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bucket-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100px;
+    background-color: #ECA869;
+}
+
+.bucket-list-title {
+    color: #faf9f5;
+    font-size: 18px;
+}
+
+.empty-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 100px;
+    background-color: #faf9f5;
+}
+
+.empty-header {
+    font-style: italic;
+    color: #faf9f5;
+}
+
+.empty-item {
+    background-color: #f7dcc3;
+}
+
+.add-button {
+    background-color: #faf9f5;
+    border: none;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.add-icon {
+    margin: auto;
+    width: 60px;
+    height: 40px;
+    stroke: #ECA869;
+}
+
+.pop-up-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.pop-up {
+    width: 350px;
+    height: 100px;
+    background-color: #E5E4E2;
+    border-radius: 15px;
+    filter: drop-shadow(3px 3px 2px #D3D3D3);
+}
+
+.container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop-up-input {
+    width: 250px;
+    margin-top: 25px;
+    border: 1px solid #E5E4E2;
+    font-size: 15px;
+}
+
+.add-item-button {
+    width: 50px;
+    height: 25px;
+    margin-top: 15px;
+    margin-right: 5px;
+    background-color: #efb987;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.cancel-item-button {
+    width: 70px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 5px;
+    background-color: #D3D3D3;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}

@@ -2,37 +2,61 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sign-out-container {
+  text-align: right;
+  margin: 15px;
+  margin-right: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sign-out-button {
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  color: #ECA869;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.greeting {
+  color: #ECA869;
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 50px;
+  margin-left: 15%;
+  font-size: 45px;
+  filter: drop-shadow(2px 2px 2px #D3D3D3);
 }
 
-.App-link {
-  color: #61dafb;
+.bucket-lists {
+  margin: auto;
+  width: 500px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bucket-lists::-webkit-scrollbar {
+  display: none;
+}
+
+.bucket-list-header {
+  color: #d3d3d3;
+  margin: 25px;
+}
+
+.bucket-list-container {
+  margin-top: 1%;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: #F5F5DC;
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+.bucket-list-name {
+  color: #ECA869;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
 }
