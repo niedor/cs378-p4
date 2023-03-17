@@ -4,7 +4,7 @@ import App from './App';
 import BucketList from './BucketList.js'
 import "./Login.css";
 
-function Login() {
+function Login( {passUser, passName} ) {
     const [signup, setSignUp] = useState(true);
     const [loginSuccess, setLoginSuccess] = useState(true);
     const navigate = useNavigate();
@@ -39,7 +39,9 @@ function Login() {
 
     const handleSignUpSubmit = () => {
         sendSignUpData();
-        navigate('/cs378-p4/Home')
+        passName(name);
+        passUser(newUser);
+        navigate(`/cs378-p4/${newUser}/Home`)
     }
 
     // login credentials
@@ -104,10 +106,15 @@ function Login() {
             if (response) {
                 const keys = Object.keys(response);
                 const dataPoints = keys
-                    .map((k) => response[k]['pass']);
-                if (String(dataPoints) === password) {
+                    .map((k) => response[k]);
+                const fetchedPass = dataPoints[0]['pass'];
+                const fetchedName = dataPoints[0]['name'];
+                if (fetchedPass === password) {
                     setLoginSuccess(true);
-                    navigate('/cs378-p4/Home');
+                    setName(fetchedName);
+                    passUser(username);
+                    passName(fetchedName);
+                    navigate(`/cs378-p4/${username}/Home`);
                 } else {
                     setLoginSuccess(false);
                 }
@@ -119,12 +126,6 @@ function Login() {
 
     return (
         <div>
-            <Router>
-            <Route path="/cs378-p4/Home" element={<App />} />
-                <Route path="/cs378-p4/Weekly" element={<BucketList title="Weekly"/>} />
-                <Route path="/cs378-p4/Monthly" element={<BucketList title="Monthly"/>} />
-                <Route path="/cs378-p4/Yearly" element={<BucketList title="Yearly"/>} />
-            </Router>
 
             {signup ? 
                 <div>

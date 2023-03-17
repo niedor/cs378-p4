@@ -2,12 +2,12 @@ import { useNavigate } from 'react-router-dom'
 import Carousel, { CarouselItem } from './Carousel';
 import './App.css';
 
-function App( {name} ) {
+function App( {name, username} ) {
   let navigate = useNavigate();
 
   const redirectToBucketList = (title) => {
     console.log("title: " + title);
-    navigate(`/cs378-p4/${title}`);
+    navigate(`/cs378-p4/${username}/${title}`);
   }
 
   const signout = () => {

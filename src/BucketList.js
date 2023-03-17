@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import {ReactComponent as Add} from './add-file-svgrepo-com.svg';
 import {ReactComponent as Back} from './back-svgrepo-com.svg';
 
-function BucketList( {title} ) {
+function BucketList( {title, username} ) {
     const databaseURL = "https://hci-p4-e6f8b-default-rtdb.firebaseio.com/";
 
     const [displayModal, setDisplayModal] = useState(false);
@@ -22,7 +22,7 @@ function BucketList( {title} ) {
     // navigate back to home page
     const navigate = useNavigate();
     const redirectToHome = () => {
-        navigate('/cs378-p4/Home');
+        navigate(`/cs378-p4/${username}/Home`);
     }
 
     // save new bucket list item
@@ -36,7 +36,7 @@ function BucketList( {title} ) {
             text: newItem
         }
 
-        return fetch(`${databaseURL}/${title}/.json`, {
+        return fetch(`${databaseURL}/${username}/${title}/.json`, {
             method: "POST",
             body: JSON.stringify(dict)
         }).then((response) => {
@@ -51,7 +51,7 @@ function BucketList( {title} ) {
 
     // get bucket list
     const getData = () => {
-        fetch(`${databaseURL}/${title}/.json`)
+        fetch(`${databaseURL}/${username}/${title}/.json`)
         .then((response) => {
             if (response.status !== 200) {
                 setDataRetrieveResult("Cannot fetch your bucket list items at this time: " + response.statusText);
